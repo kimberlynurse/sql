@@ -207,3 +207,13 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 ```
 Your thoughts...
 ```
+
+Qadri (2021) noted that the design of a database involves social, political and technical decisions at every step and is therefore not purely computational. This suggests that values systems are embedded in databases and data systems, which affect their function.
+
+As a doctoral student, who is affiliated with a university and hospital, a few of the value systems I encounter from day to day include consent and privacy, transparency and accountability, safety and reliability, fairness, efficiency, flexibility, centralization and the intersection of technology and society.
+
+When collecting and analyzing data, ensuring study participant confidentiality is required. This includes ensuring informed written or verbal consent, initially, prior to conducting the research as well as ongoing consent, collecting only the required data, ensuring participant data is password-protected and securely stored, and following a specific protocol for record retention and destruction. This is also related to the concepts of transparency and accountability with regard to study team decision making and data usage. 
+
+When introducing an intervention, safety and reliability are of utmost importance and often the intervention is pilot-tested and its measurement properties or diagnostic test properties assessed. By taking steps to avoid or account for bias and utilize diverse datasets the concept of fairness is embedded. Balancing the efficiency and flexibility of data and databases and deciding whether the data will be centralized to one location are also often points of discussion in these institutions during protocol development.
+
+Additionally, the intersection of technology and society is ever-present in day-to-day life through social media platforms and any digital application as they use databases and data systems to operate and manage user data.
