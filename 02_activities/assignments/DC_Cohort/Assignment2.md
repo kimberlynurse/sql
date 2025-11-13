@@ -68,19 +68,19 @@ Potential CUSTOMER_ADDRESS table columns for the type 1 slowly changing dimensio
 
 Before:
 
-|address_id | customer_id | unit_no | builiding_house_no | street | city | postal_code | country |
+|address_id | customer_id | unit_no | building_house_no | street | city | postal_code | country |
 |-----------|-------------|---------|--------------------|--------|------|-------------|---------|
 | 1         | 1           |         | 1                  | a      | TO   | A1A 1A1     | CA      |
 
 After update: 
 
-|address_id | customer_id | unit_no | builiding_house_no | street | city | postal_code | country |
+|address_id | customer_id | unit_no | building_house_no | street | city | postal_code | country |
 |-----------|-------------|---------|--------------------|--------|------|-------------|---------|
 | 1         | 1           |         | 2                  | b      | TO   | B2B 2B2     | CA      |
 
 Potential CUSTOMER_ADDRESS table columns for the type 2 slowly changing dimension architecture are: address_id, customer_id, unit_no, builiding_house_no, street, city,  postal_code, country, effective_start_date, effective_end_date.
 
-|address_id | customer_id | unit_no | builiding_house_no | street | city | postal_code | country | effective_start_date | effective_end_date |
+|address_id | customer_id | unit_no | building_house_no | street | city | postal_code | country | effective_start_date | effective_end_date |
 |-----------|-------------|---------|--------------------|--------|------|-------------|---------|----------------------|--------------------|
 | 1         | 1           |         | 1                  | a      | TO   | A1A 1A1     | CA      | 2018-11-12           | 2025-11-11         |
 | 2         | 1           |         | 2                  | b      | TO   | B2B 2B2     | CA      | 2025-11-12           | 9999-12-31         |
