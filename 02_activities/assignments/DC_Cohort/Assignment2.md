@@ -56,6 +56,34 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 ```
 Your answer...
 ```
+The two architectures that can be used for the CUSTOMER_ADDRESS table are type 1 and type 2 slowly changing dimensions. 
+
+A type 1 slowly changing dimension overwrites existing values with a new value and no history is retained. 
+
+A type 2 slowly changing dimension adds a new row that corresponds to the new value while retaining the existing row for historical and reporting purposes.
+
+Furthermore, type 2 allows for both the old and new record to be retained and have specific dates but the old record is assigned to a non-active effective date and the new record is assigned a unique ID and an active effective date.
+
+Potential CUSTOMER_ADDRESS table columns for the type 1 slowly changing dimension architecture are: address_id, customer_id, unit_no, builiding_house_no, street, city,  postal_code, country.
+
+Before:
+
+|address_id | customer_id | unit_no | building_house_no | street | city | postal_code | country |
+|-----------|-------------|---------|--------------------|--------|------|-------------|---------|
+| 1         | 1           |         | 1                  | a      | TO   | A1A 1A1     | CA      |
+
+After update: 
+
+|address_id | customer_id | unit_no | building_house_no | street | city | postal_code | country |
+|-----------|-------------|---------|--------------------|--------|------|-------------|---------|
+| 1         | 1           |         | 2                  | b      | TO   | B2B 2B2     | CA      |
+
+Potential CUSTOMER_ADDRESS table columns for the type 2 slowly changing dimension architecture are: address_id, customer_id, unit_no, builiding_house_no, street, city,  postal_code, country, effective_start_date, effective_end_date.
+
+|address_id | customer_id | unit_no | building_house_no | street | city | postal_code | country | effective_start_date | effective_end_date |
+|-----------|-------------|---------|--------------------|--------|------|-------------|---------|----------------------|--------------------|
+| 1         | 1           |         | 1                  | a      | TO   | A1A 1A1     | CA      | 2018-11-12           | 2025-11-11         |
+| 2         | 1           |         | 2                  | b      | TO   | B2B 2B2     | CA      | 2025-11-12           | 9999-12-31         |
 
 ***
 
@@ -185,3 +213,12 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 ```
 Your thoughts...
 ```
+This story begins as a personal account of Grade 7 home economics and the notion that one cannot automate sewing. Boykis (2019) includes the fact that it is difficult to efficiently program the creation of clothing due to human dexterity and intuition while manipulating fabrics and therefore, every piece of it has been assembled by a person. Boykis (2019) presents us with examples of robots folding towels, which leads to concepts in machine learning and creating training data sets to ensure correct predictions are being made. Images, videos, articles and social media posts are embedded in the story to support the fact that “neural networks are just people all the way down”.
+
+The following ethical issues and concepts are important to this story: labour, bias, large language model proliferation, consent, privacy and data usage, fairness and the intersection of technology and society. 
+
+Building a neural network requires several people spending time on the background work (e.g., tagging the relevant photos). The story highlights that these individuals are often underpaid in comparison to the hours of work they are engaging in, and some may even include students. Additionally, those workers may be biased. Examples in the story include that online workers may be looking for the fastest and easiest way to obtain money but may not be as thorough in their screening, which would impact the integrity of the training algorithm.
+
+Furthermore, given the proliferation of large language models or LLMs (AI systems designed to generate content as a human would) concerns around consent, privacy and data usage and fairness in terms of their output are present. The training algorithm data sets often come from the internet and may include personal or sensitive information. The issue of fairness was also depicted in the story in terms of the mislabels that were applied through ImageNet Roulette.
+
+As technology advances, its impact on society becomes more pervasive and we must consider the implications of its widespread use and the ethical issues that may arise. 
